@@ -1,22 +1,23 @@
-import React from 'react'
-import './index.css' // makes sure Tailwind + your style.css are loaded
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/About";
+import "./index.css";
 
-
-function App() {
-
+export default function App() {
   return (
-    <>
-      <div className="p-6 bg-gray-100">
-      <h1 className="text-3xl font-bold underline mb-4">
-        Hello Tailwind + Custom CSS
-      </h1>
-      
-      <button className="custom-btn">
-        Custom Styled Button
-      </button>
-    </div>
-    </>
-  )
-}
+    <Router>
+      <nav className="flex justify-center gap-6 p-4 bg-blue-500 text-white">
+        <Link to="/" className="hover:underline">Home</Link>
+        <Link to="/about" className="hover:underline">About</Link>
+      </nav>
 
-export default App
+      <div className="p-6">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
