@@ -7,6 +7,7 @@ import "./index.css";
 export default function App() {
   return (
     <Router>
+      
       <nav className="flex justify-center gap-6 p-4 bg-blue-500 text-white">
         <Link to="/" className="hover:underline">Home</Link>
         <Link to="/about" className="hover:underline">About</Link>

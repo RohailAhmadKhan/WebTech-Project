@@ -1,7 +1,7 @@
 export default function Home () {
     return (
         <>
-        <h1>hii this is Home , Learning react router dom</h1>
+        <h1 className="text-center">hii this is Home , Learning react router dom</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil adipisci ad natus fugit ab pariatur reiciendis temporibus molestiae expedita repudiandae, sunt sapiente iure odit iste excepturi dolorum? Facere, consequuntur ex.</p>
         </>
     );
